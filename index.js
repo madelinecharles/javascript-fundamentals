@@ -214,8 +214,60 @@ if (isWeekend || hour <= 7) {
 }
 
 //Exercise 6
-let enjoysMovies = prompt('Do you like watching movies?', '');
-let userAge = prompt('What is your age?', '');
-if (userAge <= 18) {
+let enjoysMovies = prompt('Do you like watching movies? (yes/no)', '').toLowerCase();
+let userAge = +prompt('What is your age?', '');
+if (enjoysMovies === "yes" && userAge < 13) {
+    alert ("You might like animated movies!");
+} else if (enjoysMovies === "yes" && userAge >= 13 && userAge <= 17) {
+    alert ("You might like teen movies!");
+} else if (enjoysMovies === "yes" && userAge > 17) {
+    alert ("You might enjoy thrillers or documentaries");
+} else if (enjoysMovies === "no") {
+    alert ("That's okay, maybe you prefer books or games");
+} else {
+    alert ("I don't know what that means");
+}
+
+//Attempting the Password check example again
+let nameOfTheUser = prompt('Who\'s there?', '');
+if (nameOfTheUser === 'Admin') {
+    let goPass = prompt('Password?', '');
+    if (goPass === 'TheMaster') {
+        alert ('Welcome!');
+    } else if (goPass === '' || goPass === null) {
+        alert ('Canceled');
+    } else {
+        alert ('Wrong Password');
+    }
+} else if (nameOfTheUser === '' || nameOfTheUser === null) {
+    alert ('Canceled');
+} else {
+    alert ('I don\'t know you');
+}
+
+//While loop
+let i = 0;
+while (i < 3) { // shows 0, then 1, then 2
+  alert( i );
+  i++;
+}
+
+//For loop: used MOST!!
+for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
+  alert(i);
+}
+
+//Breaking a loop
+let sum = 0;
+
+while (true) {
+
+  let value = +prompt("Enter a number", '');
+
+  if (!value) break; // (*)
+
+  sum += value;
 
 }
+alert( 'Sum: ' + sum );
+

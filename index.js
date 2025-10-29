@@ -271,3 +271,100 @@ while (true) {
 }
 alert( 'Sum: ' + sum );
 
+// While loop exercise
+let i = 0 // begin
+while (i < 3) { // condition
+    alert (`number ${i}!`); // body
+    i++; // step
+}
+
+//Count from 1 to 10
+for (let i = 1; i<=10; i++) {
+    console.log(i);
+}
+
+//Even numbers 
+for (let i=1; i<= 20; i++) {
+    if (i % 2 === 0) console.log(i);
+}
+
+//Array of items
+let fruits = ["apple", "banana", "cherry"];
+for (let i = 0; i < fruits.length; i++) {
+    console.log("Fruit Number", i, "is", fruits[i]);
+}
+
+//Colors Exercise
+let colorss = ["red", "blue", "green", "yellow", "purple"];
+for (let i = 0; i < colorss.length; i++) {
+    console.log ("Color", i + 1, "is", colorss[i] );
+}
+
+//Addition Loop
+let nums = [24, 5, 9, 25, 6];
+let total = 0;
+for (let i = 0; i < nums.length; i++) {
+    total = total + nums[i];
+}
+console.log("Total is", total);
+
+//Breaking a loop
+outer: for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) [
+        let input = prompt(`Value at coords (${i},${j})`, '');
+        if (!input) break outer;
+    ]
+}
+alert ('Done!');
+
+//Continuing a loop: jumps back to the beginning
+for (let i = 0; i < 4; i++) {
+    console.log("Start", i);
+    if (i === 2) continue;
+    console.log("End", i);
+}
+
+// Repeats until number > 100
+while (true) {
+    let num = prompt ("Enter a number greater than 100:", '');
+    if (num === null || num === '' || +num > 100) break;
+}
+
+//Switch => If practice
+if (browser === 'Edge') {
+    alert ('You\'ve got the Edge!');
+} else if (browser === 'Chrome'
+    || browser === 'Firefox'
+    || browser === 'Safari'
+    || browser === 'Opera') {
+        alert ( 'Okay we support these browsers too');
+    } else {
+        alert ('We hope that this page looks ok!');
+    }
+
+//If => Switch practice
+let a = +prompt('a?', '');
+switch (a) {
+    case 0:
+        alert(0);
+        break;
+    case 1:
+        alert (1);
+        break;
+    case 2:
+    case 3:
+        alert ('2,3');
+        break;
+}
+
+// Function Declaration
+function showMessage () {
+    alert('Hello everyone!');
+}
+
+//Specify what undefined will become
+function showMessage (from, text = "no text given") { //Undefined becomes "no text given"
+    alert (from + ": " text);
+}
+showMessage("Ann");
+

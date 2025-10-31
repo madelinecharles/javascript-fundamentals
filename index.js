@@ -368,3 +368,127 @@ function showMessage (from, text = "no text given") { //Undefined becomes "no te
 }
 showMessage("Ann");
 
+//Find prime numbers - use of continue
+/*
+1. Pick a number (i)
+2. Test it against all smaller numbers (j)
+3. If no one divides it evenly → it’s prime → print it
+3. If any divide it → skip it → go to the next number */
+
+function showPrimes(n) {
+  nextPrime: for (let i = 2; i < n; i++) {
+
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) continue nextPrime;
+    }
+
+    alert( i ); // a prime
+  }
+}
+
+//EASIER version to read
+function showPrimes(n) {
+
+  for (let i = 2; i < n; i++) {
+    if (!isPrime(i)) continue;
+
+    alert(i);  // a prime
+  }
+}
+
+function isPrime(n) {
+  for (let i = 2; i < n; i++) {
+    if ( n % i == 0) return false;
+  }
+  return true;
+}
+
+//Function using "OR"
+function checkAge(age) {
+return ( age > 18) || confirm('Did your parents allow you?');
+}
+
+//Return the least of two numbers 
+function min(a, b) {
+  if (a < b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+//Chat Function Exercises
+
+//Hi there
+function sayHi() {
+    alert('Hi there!');
+}
+
+//Add numbers
+function addNumbers(a, b) {
+    return a + b;
+}
+let sum = addNumbers(3, 8);
+alert(sum);
+
+//Double it
+function doubleIt(x) {
+    return x * 2;
+}
+let result = doubleIt(5);
+alert (result);
+
+//Greet a name
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+let message = greet("Alex");
+alert(message)
+
+//Greet You
+function greet() {
+    return "Hello, Madeline!";
+}
+let mesage = greet();
+alert(message);
+
+//More
+function greet(name, timeOfDay) {
+    return "Good " + timeOfDay + ", " + name + "!";
+}
+let message = greet('Madeline', 'evening');
+alert(message);
+
+//Sum loop
+function addThreeNumbers() {
+    let total = 1 + 2 + 3;
+    return total;
+}
+let result = addThreeNumbers();
+alert(result);
+
+//Next
+function addNumbersUpTo(n) {
+    let total = 1 + 2 + n;
+    return total;
+}
+let result = addNumbersUpTo(3);
+alert(result);
+
+//Next
+function sumThreeNumbers() {
+   let sum = 5 + 10 + 15;
+   return sum;
+}
+let resultado = sumThreeNumbers()
+alert (resultado);
+
+//Next
+function sumFiveNumbers() {
+    let total = 2 + 4 + 6 + 8 + 10;
+    return total;
+}
+let result = sumFiveNumbers();
+alert(result);
+
+//Next
